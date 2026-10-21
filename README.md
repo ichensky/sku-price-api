@@ -48,6 +48,7 @@ Cross-cutting: exception handlers return Problem Details from the API.
 2. `PriceBySkuQueryHandler` constructs a validated `Sku`, calls the domain `IERPClient` port, and maps the returned `PriceSnapshot` into the API response.
 3. The infrastructure `ERPClient` calls `price/{sku}`, deserializes the ERP payload, and constructs validated domain values.
 4. Errors are mapped as follows:
+
         - An ERP 404 becomes a missing result and then a domain 404.
         - Domain validation errors return 400.
         - Invalid upstream responses return 502; an open circuit returns 503; and upstream timeouts return 504.
