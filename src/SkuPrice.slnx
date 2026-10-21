@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SkuPriceApi.IntegrationTests/SkuPriceApi.IntegrationTests.csproj" />
+  <Project Path="SkuPriceApi/SkuPriceApi.csproj" />
+</Solution>
